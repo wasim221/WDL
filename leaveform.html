@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leave Application</title>
+	<style type="text/css">
+		body{
+			margin: 20px
+		}
+		.labels{
+			display: inline-block;
+			width: 150px;
+			margin: auto 30px auto auto;
+		}
+		table, th, td {
+  			border: 1px solid black;
+  			border-collapse: collapse;
+		}
+		th, td {
+  			padding: 15px;
+  			text-align: left;
+		}
+		#t1{
+			width: 100%;
+		}
+	</style>
+	<script type="text/javascript">
+		function getDays(){
+			var x = new Date(document.getElementById("start").value);
+			var y = new Date(document.getElementById("end").value);
+			var diff = y.getTime() - x.getTime();
+			diff = diff / (1000 * 3600 * 24);
+			document.getElementById("number").value = diff;
+			return false;
+		}
+	</script>
+</head>
+<body>
+	<h2 style="text-align: center;"> Leave Application </h2>
+	<form>
+		<label class="labels">Employee ID</label>
+		<input type="text" name="fid">
+		<br><br>
+		<label class="labels">Employee Name</label>
+		<input type="text" name="fname">
+		<br><br>
+		<label class="labels">Department</label>
+		<select name="dep" id="dep">
+  			<option value="developer">Developers</option>
+  			<option value="Marketing">Marketing</option>
+  			<option value="Management">Management</option>
+  			<option value="ad">Advertising</option>
+		</select>
+		<br><br>
+		<label class="labels">Designation</label>
+		<input type="text" name="fname">
+		<br><br>
+		<label class="labels">Type of Leave</label>
+		<select name="tl" id="tl">
+  			<option value="work">Work</option>
+  			<option value="personal">Personal</option>
+  			<option value="Paid">Paid</option>
+		</select>
+		<br><br>
+		<label class="labels">From Date</label>
+		<input id="start" type="Date">
+		<label class="labels" style="margin-left: 30px; width: 80px;">To Date</label>
+		<input id="end" type="Date">
+		<br><br>
+		<label class="labels">Number of days</label>
+		<input id="number" type="Number"><button class="labels" onclick="return getDays()" style="margin-left: 30px; width: 80px;">Get</button>
+		<br><br>
+		<label class="labels">Reason</label>
+		<input type="text">
+		<br><br>
+		<label class="labels">Phone Number</label>
+		<input type="Number">
+		<br><br>
+		<label class="labels">Email</label>
+		<input type="Email">
+		<br><br>
+		<label class="labels">Address</label>
+		<textarea></textarea>
+		<br><br>
+		<label class="labels" style="width: 300px">Details of Leave Application</label>
+		<br>
+		<table id="t1">
+			<tr>
+				<th>Staff ID</th>
+				<th>Name</th>
+				<th>Department</th>
+				<th>Class</th>
+				<th>Subject</th>
+				<th>Leave Time</th>
+				<th>Email</th>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<br><br>
+		<button>Reset</button><button style="margin-left: 30px">Submit</button>
+	</form>
+</body>
+</html>
