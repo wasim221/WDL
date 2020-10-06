@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sorting Numbers</title>
+	<script type="text/javascript">
+		function sortnumber(){
+			var n = prompt("Enter Number of Elements");
+			var a = [];
+			var orl = document.getElementById("orarr");
+			var sarr = document.getElementById("sarr");
+			for (var i = 0; i < n; i++) {
+				a.push(prompt("Enter Number"));
+			}
+			orl.innerText = a;
+			a.sort();
+			sarr.innerText = a;
+		}
+	</script>
+</head>
+<body>
+	<h3>Sort Numbers</h3>
+	<button onclick="sortnumber()">Give Input</button>
+	<br><br>
+	<h3 id="orlab">Original Array</h3>
+	<h3 id="orarr"></h3>
+	<br><br>
+	<h3>Sorted Array</h3>
+	<h3 id="sarr"></h3>
+</body>
+</html>
